@@ -579,3 +579,8 @@ export const fetchSiteInfoData = (siteId) => new Promise((resolve, reject) => se
     const data = siteInfoData.find( value => value.id === siteId);
     resolve(data);
 }, DELAY));
+
+export const pushAllOutageInfoForOneSite = (siteId, bodyData) => new Promise((resolve, reject) => setTimeout(() => {
+    const data = siteInfoData.find( value => value.id === siteId);
+    resolve(data);
+}, DELAY));
