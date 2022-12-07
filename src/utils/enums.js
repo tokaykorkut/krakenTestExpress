@@ -1,0 +1,20 @@
+
+export const ErrorMessageEnum = Object.freeze({
+    ERROR: "ERROR",
+    MISSING_PARAMETERS: "MISSING_PARAMETERS",
+    AUTHORIZATION_ERROR: "AUTHORIZATION_ERROR",
+    TOO_MANY_REQUEST: "TOO_MANY_REQUEST",
+    FORBIDDEN: "FORBIDDEN",
+    TOO_MANY_REQUESTS: "TOO_MANY_REQUESTS"
+});
+
+export const HttpStatusEnum = Object.freeze({
+    OK: 200,
+    BAD_REQUEST: 400,
+    FORBIDDEN: 403,
+    NOT_FOUND: 404,
+    TOO_MANY_REQUESTS: 429,
+    INTERNAL_SERVER_ERROR: 500
+});
+
+export const DELAY = 1000;
