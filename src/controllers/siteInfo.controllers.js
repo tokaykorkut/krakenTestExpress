@@ -11,7 +11,6 @@ export const getOneSiteInfo = async (req, res) => {
     logHttpReq(req.reqId, req.method, req.originalUrl, siteId);
     try {
         const result = await siteInfoService.getOneSiteInfo(siteId);
-        console.log(result)
         if (result === undefined || result === null) {
             res.status(HttpStatusEnum.NOT_FOUND).json({message: ErrorMessageEnum.NOT_FOUND});
         }
