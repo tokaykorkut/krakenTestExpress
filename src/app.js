@@ -4,8 +4,12 @@ import { logger } from "./middlewares/logger.middlewares";
 import cookieParser from "cookie-parser";
 import { splitRouter } from "./routes/index.routes";
 
+// * Development
+import * as dotenv from "dotenv";
+dotenv.config();
+
 const app = express();
-const port = process.env.PORT || 3333;
+const port = process.env.PORT;
 
 app.use(express.json());
 app.use(express.urlencoded({extended: false}));
