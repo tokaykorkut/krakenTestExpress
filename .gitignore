@@ -39,10 +39,6 @@ Thumbs.db
 
 # Env files
 *.env
-.env.development
-.env.stage
-.env.production
-
 
 # Log files
 *.log
