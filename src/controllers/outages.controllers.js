@@ -7,12 +7,12 @@ export const getAllOutages = async (req, res) => {
     try {
         const result = await outagesService.getAllOutages();
         if (result === undefined || result === null) {
-            res.status(HttpStatusEnum.NOT_FOUND).json({message: ErrorMessageEnum.NOT_FOUND});
+            return res.status(HttpStatusEnum.NOT_FOUND).json({message: ErrorMessageEnum.NOT_FOUND});
         }
         logHttpRes(req.reqId, req.method, req.originalUrl, HttpStatusEnum.OK, result);
-        res.status(HttpStatusEnum.OK).json(result);
+        return res.status(HttpStatusEnum.OK).json(result);
     } catch (error) {
         logHttpErr(req.reqId, error);
-        res.status(HttpStatusEnum.INTERNAL_SERVER_ERROR).json({message: ErrorMessageEnum.INTERNAL_SERVER_ERROR});
+        return res.status(HttpStatusEnum.INTERNAL_SERVER_ERROR).json({message: ErrorMessageEnum.INTERNAL_SERVER_ERROR});
     }
 }

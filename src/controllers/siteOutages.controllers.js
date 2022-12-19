@@ -18,6 +18,6 @@ export const addAllOutageInfoForOneSite = async (req, res) => {
         return res.status(HttpStatusEnum.OK).json();
     } catch (error) {
         logHttpErr(req.reqId, error);
-        res.status(HttpStatusEnum.INTERNAL_SERVER_ERROR).json({message: ErrorMessageEnum.INTERNAL_SERVER_ERROR});
+        return res.status(HttpStatusEnum.INTERNAL_SERVER_ERROR).json({message: ErrorMessageEnum.INTERNAL_SERVER_ERROR});
     }
 }
